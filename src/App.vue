@@ -1,14 +1,34 @@
 <template>
-		<h1>{{ msg }}</h1>
+	<div>Welcome</div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
 	name: 'app',
-	data () {
+	
+	data() {
 		return {
-			msg: 'Welcome to Your Vue.js App'
+			films: []
 		}
+	},
+
+	computed: {
+		...mapGetters([
+			'getLoading',
+			'getFilms'
+		])
+	},
+
+	created() {
+		this.setFilms()
+	},
+
+	methods: {
+		...mapActions([
+			'setFilms'
+		])
 	}
 }
 </script>
