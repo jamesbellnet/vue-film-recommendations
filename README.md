@@ -27,5 +27,4 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ## To-Do
 
-- [x] Styling
 - [ ] Form inputs to add/toggle search params

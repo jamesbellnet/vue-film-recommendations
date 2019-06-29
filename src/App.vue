@@ -25,12 +25,12 @@
 				<div class="col-md-6">
 					<div>
 						<h2 class="mb-3">{{ film.title }}</h2>
-			
-			<p>
-				{{ film.overview }}
-			</p>
-		</div>
-	</div>
+						
+						<p>
+							{{ film.overview }}
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -84,18 +84,18 @@ export default {
 
 	div.row,
 	div.col-md-6 {
-		@include flex()
+		@include flex();
 	}
 
 	div.container {
 		margin-top: 1.5rem;
 		margin-bottom: 1.5rem;
-}
+	}
 
 	span.no-image {
 		width: 185px;
 		height: 280px;
 		background: #a9a9a9;
-		@include flex()
-}
+		@include flex();
+	}
 </style>
