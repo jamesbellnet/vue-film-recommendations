@@ -3,7 +3,7 @@ var webpack = require('webpack')
 var Dotenv = require ('dotenv-webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: ['./src/main.js', './src/sass/app.scss'],
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
