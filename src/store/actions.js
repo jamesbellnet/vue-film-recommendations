@@ -16,13 +16,19 @@ export default {
 				}
 			})
             .then((response) => {
-				if(response.status > 200) {
-					throw new Error(response.statusText)
-				} else {
+				if(response.status === 200) {
 					commit('films', response.data.results)
 				}
             })
-			.catch(error => console.log(error))
+			.catch(error => {
+				console.log(error)
+
+				let status = error.response.status
+				let statusText = error.response.statusText
+				let errorMessage = 'Error: ' + status + ': ' + statusText
+				
+				commit('error', errorMessage)
+			})
 			.finally(() => commit('loading', false))
     }
 }

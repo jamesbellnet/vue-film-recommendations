@@ -7,6 +7,14 @@
 			class="btn btn-dark"
 			@click="getFilm"
 		>Get Film</button>
+
+		<div v-show="getLoading" class="mt-3">
+			<i class="fas fa-spinner fa-spin"></i>
+		</div>
+
+		<div v-show="getError" class="alert alert-danger mt-3" role="alert">
+			{{ getError }}
+		</div>
 		
 		<div v-if="film" class="container">
 			<div class="row">
@@ -50,8 +58,9 @@ export default {
 
 	computed: {
 		...mapGetters([
+			'getFilms',
 			'getLoading',
-			'getFilms'
+			'getError'
 		])
 	},
 

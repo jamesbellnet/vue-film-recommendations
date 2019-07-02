@@ -1,9 +1,13 @@
 export default {
+    getFilms(state) {
+        return state.films
+    },
+    
     getLoading(state) {
         return state.loading
     },
 
-    getFilms(state) {
-        return state.films
+    getError(state) {
+        return state.error
     }
 }

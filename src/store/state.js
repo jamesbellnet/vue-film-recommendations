@@ -1,5 +1,7 @@
 export default {
+    films: [],
+    
     loading: false,
 
-    films: []
+    error: null
 }
