@@ -2,7 +2,7 @@
   "name": "vue-film-recommendations",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "James Bell <hello@jamesbell.net>",
+  "author": "James Bell <dev@jamesbell.net>",
   "license": "MIT",
   "private": true,
   "scripts": {
